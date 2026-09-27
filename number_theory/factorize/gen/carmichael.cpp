@@ -116,7 +116,7 @@ int main(int, char**) {
     int q = MAX_Q;
     printf("%d\n", q);
     for (int i = 0; i < q; i++) {
-		long long x = numbers[i % size(numbers)];
+		long long x = ::numbers[i % size(::numbers)];
         printf("%lld\n", x);
     }
     return 0;

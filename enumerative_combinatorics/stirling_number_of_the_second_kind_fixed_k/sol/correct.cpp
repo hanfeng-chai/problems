@@ -228,7 +228,7 @@ FormalPowerSeries<T> log(const FormalPowerSeries<T> &f, int deg = -1) {
   assert(f[0] == 1);
   if (deg < 0)
     deg = (int)f.size();
-  FormalPowerSeries<T> res = integral(pre(diff(f) * inv(f, deg), deg - 1));
+  FormalPowerSeries<T> res = ::integral(pre(diff(f) * inv(f, deg), deg - 1));
   return res;
 }
 template <typename T>
